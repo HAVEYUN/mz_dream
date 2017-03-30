@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--这里的data节点就像是连接 View 和 Modle 的桥梁-->
+    <data>
+
+        <variable
+            name="user"
+            type="zzy.mz_dream.model.User"/>
+
+        <variable
+            name="presenter"
+            type="zzy.mz_dream.activity.DatabindingActivity.presenter"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightgray"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorAccent">
+
+            <ImageView
+                android:id="@+id/imBack"
+                android:layout_width="55px"
+                android:layout_height="55px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:background="@drawable/img_back_shop_detail"
+                android:onClick="@{presenter.onClick}"/>
+
+            <TextView
+
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="标题"
+                android:textColor="@color/lightgray"
+                android:textSize="50px"/>
+
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                android:onTextChanged="@{presenter.onTextChanged}"
+                tools:text="@string/username"/>
+
+            <EditText
+                android:id="@+id/edPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                tools:text="@string/password"/>
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="mzdream"
+                android:text="@{user.name}"/>
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="10"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

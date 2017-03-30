@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="zzy.mz_dream.activity.OkhttpActivity.Presenter"/>
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorAccent">
+
+            <ImageView
+                android:id="@+id/imBack"
+                android:layout_width="55px"
+                android:layout_height="55px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:background="@drawable/img_back_shop_detail"
+                android:onClick="@{presenter.onClick}"/>
+
+            <TextView
+
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="标题"
+                android:textColor="@color/lightgray"
+                android:textSize="50px"/>
+
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btGetContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DataGet"
+            android:onClick="DataGet"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="content"/>
+
+    </LinearLayout>
+
+</layout>

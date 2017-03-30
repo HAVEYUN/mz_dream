@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightgray"
+        android:orientation="vertical">
+        
+
+        <Button
+            android:id="@+id/btnIntent"
+            android:onClick="IntentUsage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="intent基础用法"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="返回数据给上一个activity"
+                android:layout_below="@+id/btnIntent2"
+                android:textColor="@color/colorAccent"
+                android:textSize="40px"/>
+
+            <Button
+                android:id="@+id/btnIntent2"
+                android:onClick="startActivityForResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="startActivityForResult"/>
+            
+            
+            
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:text="intent基础用法传来的消息"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnGetContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取上文传来消息"/>
+
+</LinearLayout>
