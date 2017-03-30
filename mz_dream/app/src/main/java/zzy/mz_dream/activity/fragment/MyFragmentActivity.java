@@ -4,7 +4,9 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import zzy.mz_dream.R;
 import zzy.mz_dream.databinding.FragmentActivityBinding;
@@ -29,10 +31,10 @@ public class MyFragmentActivity extends FragmentActivity {
         mBinding.btnFrag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                TitleFragment titleFragment = (TitleFragment) getSupportFragmentManager().findFragmentById(R.id.frTitle);
-//                String str = titleFragment.FragmentMsg();
-//                Log.e(TAG, "onClick: " + str);
-//                Toast.makeText(MyFragmentActivity.this, str, Toast.LENGTH_SHORT).show();
+                TitleFragment titleFragment = (TitleFragment) getSupportFragmentManager().findFragmentById(R.id.frTitle);
+                String str = titleFragment.FragmentMsg();
+                Log.e(TAG, "onClick: " + str);
+                Toast.makeText(MyFragmentActivity.this, str, Toast.LENGTH_SHORT).show();
 
 
             }
@@ -40,9 +42,9 @@ public class MyFragmentActivity extends FragmentActivity {
 
     }
 
-//    public String MsgFragment() {
-//        return "TitleFragment中消息";
-//    }
+    public String MsgFragment() {
+        return "TitleFragment中消息";
+    }
 
 
 }
