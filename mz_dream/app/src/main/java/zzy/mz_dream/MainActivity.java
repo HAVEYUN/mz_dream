@@ -9,9 +9,10 @@ import android.view.View;
 import zzy.mz_dream.activity.DatabindingActivity;
 import zzy.mz_dream.activity.OkhttpActivity;
 import zzy.mz_dream.activity.eventbus.EventbusActivity;
-import zzy.mz_dream.activity.fragment.MyFragmentActivity;
+import zzy.mz_dream.activity.fragment.MyFragment;
 import zzy.mz_dream.activity.intent.IntentActivity;
 import zzy.mz_dream.databinding.ActivityMainBinding;
+import zzy.mz_dream.fragment.MyFragmentone;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding mBinding;
@@ -51,14 +52,19 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.btnEvent:
-                  intent = new Intent();
+                    intent = new Intent();
                     intent.setClass(MainActivity.this, EventbusActivity.class);
                     startActivity(intent);
                     break;
 
-                case R.id.btnFrag:
+                case R.id.btnFragment:
                     intent = new Intent();
-                    intent.setClass(MainActivity.this, MyFragmentActivity.class);
+                    intent.setClass(MainActivity.this, MyFragment.class);
+                    startActivity(intent);
+                    break;
+                case R.id.btnFragmentone:
+                    intent = new Intent();
+                    intent.setClass(MainActivity.this, MyFragmentone.class);
                     startActivity(intent);
                     break;
             }

@@ -1,4 +1,4 @@
-package zzy.mz_dream.activity.fragment;
+package zzy.mz_dream.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,28 +12,26 @@ import zzy.mz_dream.R;
 
 /**
  * Author: mz_dream  PC:MZ
- * Time: 2017/3/30 10:32
+ * Time: 2017/3/31 16:16
  * Email: 826680069@qq.com
  * Instruction: please enter class instruction here
  */
 public class ContentFragment extends Fragment {
-    TextView tvContent;
-//    MyFragment mMyFragment;
-//    TitleFragment mTitleFragment;
-
     View mView;
+    TextView tvContent;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragmentcontent_fragment, null);
+        mView = inflater.inflate(R.layout.content_fragment, null);
 
         tvContent = (TextView) mView.findViewById(R.id.tvContent);
-
-//       tvContent.setText(mMyFragment.MsgInfo().toString());
-
-
         return mView;
+    }
+
+    public void ShowMsg(String msg) {
+        tvContent.setText(msg);
 
     }
+
 }

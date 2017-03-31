@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -22,10 +23,12 @@ import zzy.mz_dream.model.MsgeventModel;
 public class EventbusActivity extends AppCompatActivity {
 
     EventbusActivityBinding mBinding;
-    MsgeventModel mMsgeventModel = new MsgeventModel("loveshowonline",1010);
+    MsgeventModel mMsgeventModel = new MsgeventModel("loveshowonline", 1010);
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
+        //全屏显示（去除顶部部件：如：电量）
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.eventbus_activity);

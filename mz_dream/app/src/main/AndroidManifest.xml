@@ -25,7 +25,9 @@
         <activity android:name=".activity.intent.ReceivebackValueActivity"/>
         <activity android:name=".activity.eventbus.EventbusActivity"/>
         <activity android:name=".activity.eventbus.ReceiveMsgActivity"/>
-        <activity android:name=".activity.fragment.MyFragmentActivity"/>
+        <activity android:name=".activity.fragment.MainFragmentActivity"/>
+        <activity android:name=".activity.fragment.MyFragment"/>
+        <activity android:name=".fragment.MyFragmentone"/>
     </application>
 
 </manifest>
