@@ -67,6 +67,14 @@
             android:onClick="@{presenter.onClick}"
             android:text="Fragmentone"/>
 
+        <Button
+            android:id="@+id/btnColculater"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:onClick="@{presenter.onClick}"
+            android:text="计算器"/>
+
 
 
     </LinearLayout>

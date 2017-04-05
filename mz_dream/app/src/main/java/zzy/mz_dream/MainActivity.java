@@ -11,6 +11,7 @@ import zzy.mz_dream.activity.OkhttpActivity;
 import zzy.mz_dream.activity.eventbus.EventbusActivity;
 import zzy.mz_dream.activity.fragment.MyFragment;
 import zzy.mz_dream.activity.intent.IntentActivity;
+import zzy.mz_dream.calculatorDemo.ColculatorActivity;
 import zzy.mz_dream.databinding.ActivityMainBinding;
 import zzy.mz_dream.fragment.MyFragmentone;
 
@@ -65,6 +66,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btnFragmentone:
                     intent = new Intent();
                     intent.setClass(MainActivity.this, MyFragmentone.class);
+                    startActivity(intent);
+                    break;
+                case R.id.btnColculater:
+                    intent = new Intent();
+                    intent.setClass(MainActivity.this, ColculatorActivity.class);
                     startActivity(intent);
                     break;
             }

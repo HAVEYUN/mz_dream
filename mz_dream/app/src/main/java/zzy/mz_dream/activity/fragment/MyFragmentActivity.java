@@ -32,7 +32,7 @@ public class MyFragmentActivity extends FragmentActivity {
             @Override
             public void onClick(View view) {
                 TitleFragment titleFragment = (TitleFragment) getSupportFragmentManager().findFragmentById(R.id.frTitle);
-                String str = titleFragment.FragmentMsg();
+                String str = titleFragment.MsgTitle();
                 Log.e(TAG, "onClick: " + str);
                 Toast.makeText(MyFragmentActivity.this, str, Toast.LENGTH_SHORT).show();
 
@@ -42,9 +42,6 @@ public class MyFragmentActivity extends FragmentActivity {
 
     }
 
-    public String MsgFragment() {
-        return "TitleFragment中消息";
-    }
 
 
 }
