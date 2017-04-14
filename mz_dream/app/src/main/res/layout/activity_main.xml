@@ -22,24 +22,24 @@
             android:id="@+id/btnInto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{presenter.onClick}"
             android:background="@color/colorPrimary"
+            android:onClick="@{presenter.onClick}"
             android:text="databinding"/>
 
         <Button
             android:id="@+id/btnOkhttp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{presenter.onClick}"
             android:background="@color/colorPrimary"
+            android:onClick="@{presenter.onClick}"
             android:text="okhttp"/>
 
         <Button
             android:id="@+id/btnIntent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{presenter.onClick}"
             android:background="@color/colorPrimary"
+            android:onClick="@{presenter.onClick}"
             android:text="intent"/>
 
 
@@ -47,8 +47,8 @@
             android:id="@+id/btnEvent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{presenter.onClick}"
             android:background="@color/colorPrimary"
+            android:onClick="@{presenter.onClick}"
             android:text="EventBus"/>
 
         <Button
@@ -75,6 +75,13 @@
             android:onClick="@{presenter.onClick}"
             android:text="计算器"/>
 
+        <Button
+            android:id="@+id/btn_Pview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:onClick="@{presenter.onClick}"
+            android:text="选择器"/>
 
 
     </LinearLayout>

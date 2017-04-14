@@ -53,10 +53,10 @@ public class DatabindingActivity extends Activity {
 
         //3、监听器绑定，未完成...
         public void onClicklistenerBing(User user) {
+
             Toast.makeText(DatabindingActivity.this, user.getAge(), Toast.LENGTH_SHORT).show();
 
         }
-
 
     }
 

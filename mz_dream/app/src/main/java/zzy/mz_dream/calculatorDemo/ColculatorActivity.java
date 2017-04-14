@@ -200,7 +200,6 @@ public class ColculatorActivity extends Activity implements View.OnClickListener
                 result = 0;//0
 
             } else if (op.equals("÷")) {
-
                 result = 0;
 
             }

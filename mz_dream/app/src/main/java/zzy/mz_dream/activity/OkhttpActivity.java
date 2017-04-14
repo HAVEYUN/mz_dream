@@ -36,7 +36,6 @@ public class OkhttpActivity extends AppCompatActivity {
 
         mBinding.setPresenter(new Presenter());
 
-
     }
 
     public class Presenter {

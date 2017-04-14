@@ -30,6 +30,7 @@
         <activity
             android:name=".calculatorDemo.ColculatorActivity"
             android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name=".pickerviewdemo.PickerViewMain"/>
     </application>
 
 </manifest>

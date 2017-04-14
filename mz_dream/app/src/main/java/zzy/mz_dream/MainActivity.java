@@ -14,6 +14,7 @@ import zzy.mz_dream.activity.intent.IntentActivity;
 import zzy.mz_dream.calculatorDemo.ColculatorActivity;
 import zzy.mz_dream.databinding.ActivityMainBinding;
 import zzy.mz_dream.fragment.MyFragmentone;
+import zzy.mz_dream.pickerviewdemo.PickerViewMain;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding mBinding;
@@ -73,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
                     intent.setClass(MainActivity.this, ColculatorActivity.class);
                     startActivity(intent);
                     break;
+                case R.id.btn_Pview:
+                    intent = new Intent();
+                    intent.setClass(MainActivity.this, PickerViewMain.class);
+                    startActivity(intent);
             }
 
 
