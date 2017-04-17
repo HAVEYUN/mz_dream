@@ -1,5 +1,6 @@
 package zzy.mz_dream.pickerviewdemo;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,24 +20,29 @@ import zzy.mz_dream.R;
  * Author: mz_dream  PC:MZ
  * Time: 2017/4/14 15:54
  * Email: 826680069@qq.com
- * Instruction: please enter class instruction here
+ * Instruction:时间选择器
  */
 public class PickerViewMain extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnPview;
+    private Button btnPview,btnCustumTime,btnCustumTime2;
 
     private TimePickerView pvTime;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pickerview_main);
 
-        initTimePicker();
         btnPview = (Button) findViewById(R.id.btnPview);
-
+        btnCustumTime = (Button) findViewById(R.id.btnCustumTime);
+        btnCustumTime2 = (Button) findViewById(R.id.btnCustumTime2);
 
         btnPview.setOnClickListener(this);
+        btnCustumTime.setOnClickListener(this);
+        btnCustumTime2.setOnClickListener(this);
+
+        initTimePicker();
 
 
     }
@@ -45,8 +51,16 @@ public class PickerViewMain extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
 
         if (view.getId() == R.id.btnPview && pvTime != null) {
-            pvTime.show(view);
+            pvTime.show(view);//弹出时间选择器，传递参数过去，回调的时候则可以绑定此view
 
+        }else if(view.getId()==R.id.btnCustumTime){
+            Intent intent = new Intent();
+            intent.setClass(PickerViewMain.this, CustomTimePicker.class);
+            startActivity(intent);
+        }else if(view.getId()==R.id.btnCustumTime2){
+            Intent intent = new Intent();
+            intent.setClass(PickerViewMain.this, ConditionsSelector.class);
+            startActivity(intent);
         }
     }
 
@@ -81,6 +95,7 @@ public class PickerViewMain extends AppCompatActivity implements View.OnClickLis
 
 
     }
+
 
     private String getTime(Date date) {//可根据需要自行截取数据显示
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

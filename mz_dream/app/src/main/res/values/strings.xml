@@ -3,4 +3,7 @@
     <string name="username">用户名：</string>
     <string name="password">密码：</string>
     <string name="pickView_view">时间选择器</string>
+    <string name="btnCustem">自定义选择器</string>
+    <string name="btnCustemTime">时间选择器自定义布局</string>
+
 </resources>

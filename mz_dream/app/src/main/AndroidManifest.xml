@@ -31,6 +31,8 @@
             android:name=".calculatorDemo.ColculatorActivity"
             android:theme="@android:style/Theme.NoTitleBar"/>
         <activity android:name=".pickerviewdemo.PickerViewMain"/>
+        <activity android:name=".pickerviewdemo.CustomTimePicker"/>
+        <activity android:name=".pickerviewdemo.ConditionsSelector"/>
     </application>
 
 </manifest>
