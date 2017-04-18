@@ -33,6 +33,7 @@
         <activity android:name=".pickerviewdemo.PickerViewMain"/>
         <activity android:name=".pickerviewdemo.CustomTimePicker"/>
         <activity android:name=".pickerviewdemo.ConditionsSelector"/>
+        <activity android:name=".pickerviewdemo.json.JsonDataActivity"/>
     </application>
 
 </manifest>

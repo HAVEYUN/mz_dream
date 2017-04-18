@@ -22,5 +22,13 @@
         android:layout_height="wrap_content"
         android:text="条件选择器"/>
 
+    <Button
+        android:id="@+id/btn_GotoJsonData"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tvTime"
+        android:layout_margin="10dp"
+        android:text="省市区Json文件解析示例"/>
+
 
 </LinearLayout>
