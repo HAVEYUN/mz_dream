@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bigkoo.pickerview.OptionsPickerView;
 import com.bigkoo.pickerview.listener.CustomListener;
@@ -22,7 +23,7 @@ import zzy.mz_dream.pickerviewdemo.bean.ProvinceBean;
  * Author: mz_dream  PC:MZ
  * Time: 2017/4/17 16:36
  * Email: 826680069@qq.com
- * Instruction: 条件选择器;自定义条件选择器
+ * Instruction: 条件选择器、自定义条件选择器、添加选择器（不联动）、Toast的用法
  */
 public class ConditionsSelector extends AppCompatActivity implements View.OnClickListener {
 
@@ -40,6 +41,7 @@ public class ConditionsSelector extends AppCompatActivity implements View.OnClic
     private Button btn_Options, btn_CustomOptions, btn_no_linkage;
 
     private OptionsPickerView pvOptions, pvCustomOptions, pvNoLinkOptions;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -212,6 +214,10 @@ public class ConditionsSelector extends AppCompatActivity implements View.OnClic
             public void onOptionsSelect(int options1, int options2, int options3, View v) {
 
 //                String st = food.get(options1) + clothes.get(options2) + computer.get(options3);
+                String st = "food:"+food.get(options1)
+                        +"\nclothes:"+clothes.get(options2)//\n 换行
+                        +"\ncomputer:"+computer.get(options3);
+                showToast(st);
 
             }
         }).setTitleText("不联动")
@@ -233,6 +239,11 @@ public class ConditionsSelector extends AppCompatActivity implements View.OnClic
         computer.add("Lenovo");
         computer.add("Apple");
         computer.add("HP");
+    }
+
+    public void showToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+
     }
 
 }
