@@ -15,7 +15,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 import zzy.mz_dream.R;
-import zzy.mz_dream.pickerviewdemo.json.JsonDataActivity;
 
 /**
  * Author: mz_dream  PC:MZ
@@ -38,12 +37,12 @@ public class PickerViewMain extends AppCompatActivity implements View.OnClickLis
         btnPview = (Button) findViewById(R.id.btnPview);
         btnCustumTime = (Button) findViewById(R.id.btnCustumTime);
         btnCustumTime2 = (Button) findViewById(R.id.btnCustumTime2);
-        btn_GotoJsonData = (Button) findViewById(R.id.btn_GotoJsonData);
+//        btn_GotoJsonData = (Button) findViewById(R.id.btn_GotoJsonData);
 
         btnPview.setOnClickListener(this);
         btnCustumTime.setOnClickListener(this);
         btnCustumTime2.setOnClickListener(this);
-        btn_GotoJsonData.setOnClickListener(this);
+//        btn_GotoJsonData.setOnClickListener(this);
 
         initTimePicker();
 
@@ -64,8 +63,9 @@ public class PickerViewMain extends AppCompatActivity implements View.OnClickLis
             Intent intent = new Intent();
             intent.setClass(PickerViewMain.this, ConditionsSelector.class);
             startActivity(intent);
-        }else if(view.getId()==R.id.btn_GotoJsonData){
-            startActivity(new Intent(PickerViewMain.this, JsonDataActivity.class));
+
+        }else if(view.getId()==R.id.btnCustumTime2){
+//            startActivity(new Intent(PickerViewMain.this, JsonDataActivity.class));
 
 
         }

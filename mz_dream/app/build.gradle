@@ -22,6 +22,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -33,10 +34,13 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     testCompile 'junit:junit:4.12'
 
+
     //okhttp依赖
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     //eventbus
     compile 'org.greenrobot:eventbus:3.0.0'
-//时间选择库
+    //时间选择库
     compile 'com.contrarywind:Android-PickerView:3.2.4'
+    //Gson
+    compile 'com.google.code.gson:gson:2.7'
 }

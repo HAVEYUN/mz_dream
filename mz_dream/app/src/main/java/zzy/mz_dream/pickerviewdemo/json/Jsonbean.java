@@ -5,24 +5,22 @@ import com.bigkoo.pickerview.model.IPickerViewData;
 import java.util.List;
 
 /**
- * Author: mz_dream  PC:MZ
- * Time: 2017/4/18 17:23
- * Email: 826680069@qq.com
- * Instruction: TODO<json数据源>
+ * TODO<json数据源>
+ *
+ * @author: 小嵩
+ * @date: 2017/3/16 15:36
  */
-public class Jsonbean implements IPickerViewData {
+
+public class JsonBean implements IPickerViewData {
+
 
     /**
      * name : 省份
      * city : [{"name":"北京市","area":["东城区","西城区","崇文区","宣武区","朝阳区"]}]
      */
+
     private String name;
     private List<CityBean> city;
-
-    public Jsonbean(String name, List<CityBean> city) {
-        this.name = name;
-        this.city = city;
-    }
 
     public String getName() {
         return name;
@@ -32,11 +30,11 @@ public class Jsonbean implements IPickerViewData {
         this.name = name;
     }
 
-    public List<CityBean> getCity() {
+    public List<CityBean> getCityList() {
         return city;
     }
 
-    public void setCity(List<CityBean> city) {
+    public void setCityList(List<CityBean> city) {
         this.city = city;
     }
 
@@ -45,8 +43,9 @@ public class Jsonbean implements IPickerViewData {
     // PickerView会通过IPickerViewData获取getPickerViewText方法显示出来。
     @Override
     public String getPickerViewText() {
-        return null;
+        return this.name;
     }
+
 
 
     public static class CityBean {
@@ -54,6 +53,7 @@ public class Jsonbean implements IPickerViewData {
          * name : 城市
          * area : ["东城区","西城区","崇文区","昌平区"]
          */
+
         private String name;
         private List<String> area;
 
