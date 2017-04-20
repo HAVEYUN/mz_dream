@@ -12,6 +12,7 @@ import zzy.mz_dream.activity.eventbus.EventbusActivity;
 import zzy.mz_dream.activity.fragment.MyFragment;
 import zzy.mz_dream.activity.intent.IntentActivity;
 import zzy.mz_dream.calculatorDemo.ColculatorActivity;
+import zzy.mz_dream.customdialog.CustomMain;
 import zzy.mz_dream.databinding.ActivityMainBinding;
 import zzy.mz_dream.fragment.MyFragmentone;
 import zzy.mz_dream.pickerviewdemo.PickerViewMain;
@@ -77,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_Pview:
                     intent = new Intent();
                     intent.setClass(MainActivity.this, PickerViewMain.class);
+                    startActivity(intent);
+
+                    break;
+                case R.id.btn_Dialog:
+                    intent = new Intent(MainActivity.this, CustomMain.class);
                     startActivity(intent);
             }
 

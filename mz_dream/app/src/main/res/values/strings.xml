@@ -6,4 +6,8 @@
     <string name="btnCustem">自定义选择器</string>
     <string name="btnCustemTime">时间选择器自定义布局</string>
 
+    <string name="common_text_cancel">取消</string>
+    <string name="common_text_sure">重新拍</string>
+
+
 </resources>

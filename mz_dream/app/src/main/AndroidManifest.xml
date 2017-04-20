@@ -34,6 +34,7 @@
         <activity android:name=".pickerviewdemo.CustomTimePicker"/>
         <activity android:name=".pickerviewdemo.ConditionsSelector"/>
         <activity android:name=".pickerviewdemo.json.JsonDataActivity"/>
+        <activity android:name=".customdialog.CustomMain"/>
     </application>
 
 </manifest>

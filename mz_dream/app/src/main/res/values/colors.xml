@@ -11,4 +11,16 @@
 
     <color name="white">#f7f6f4</color>
     <color name="orange">#cceadc13</color>
+
+    <!-- 白色 -->
+    <color name="whites">#ffffff</color>
+    <!-- 黑色 -->
+    <color name="blacks">#000000</color>
+    <!-- 绿色 -->
+    <color name="green">#0dab61</color>
+    <!-- 浅灰色 -->
+    <color name="grays">#ffd1d1d1</color>
+
+    <color name="red">#d90c0c</color>
+
 </resources>

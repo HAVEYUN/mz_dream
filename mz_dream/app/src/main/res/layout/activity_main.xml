@@ -83,6 +83,14 @@
             android:onClick="@{presenter.onClick}"
             android:text="选择器"/>
 
+        <Button
+            android:id="@+id/btn_Dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:onClick="@{presenter.onClick}"
+            android:text="提示框"/>
+
 
     </LinearLayout>
 
