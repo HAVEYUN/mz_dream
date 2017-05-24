@@ -35,6 +35,72 @@
         <activity android:name=".pickerviewdemo.ConditionsSelector"/>
         <activity android:name=".pickerviewdemo.json.JsonDataActivity"/>
         <activity android:name=".customdialog.CustomMain"/>
+        <activity android:name=".activity.broadCaset.SendBroadCast"/>
+        <activity android:name=".activity.broadCaset.orderbroadcaset.SendBroadCast2"/>
+
+        <!--第一个接收者-->
+
+        <!--broadcase 静态注册-->
+        <!--只要是zzy.mz_dream.activity.broadcaset;这个地址的广播，BroadCasetDemo都能够接收的到。-->
+        <receiver android:name=".activity.broadCaset.FirstReceiver">
+            <intent-filter>
+                <action android:name="com.zhidi.MY_BROADCAST"/>
+                <!--//使用过滤器，接收指定action广播-->
+            </intent-filter>
+        </receiver>
+
+        <!--第二个接收者-->
+        <receiver android:name=".activity.broadCaset.SecondReceiver">
+            <intent-filter>
+                <action android:name="com.zhidi.MY_BROADCAST"/>
+            </intent-filter>
+        </receiver>
+
+        <!--第三个接收者-->
+        <receiver android:name=".activity.broadCaset.ThirstReceiver">
+            <intent-filter>
+                <action android:name="com.zhidi.MY_BROADCAST"/>
+                "
+            </intent-filter>
+        </receiver>
+
+        <!--////////////////////////////////////////////////////////////////////////-->
+
+        <!-- 1、第一个广播接收者。 -->
+        <receiver
+            android:name=".activity.broadCaset.orderbroadcaset.FirstReceiver"
+            android:permission="true">
+            　　
+            <intent-filter android:priority="1000">
+                　
+                <action android:name="com.zhidi.MY_BROADCAST2"></action>
+                　　
+            </intent-filter>
+        </receiver>
+
+        <!-- 2、第二个广播接收者。 -->
+        <receiver
+            android:name=".activity.broadCaset.orderbroadcaset.SecondReceiver"
+            android:permission="true">
+            　　
+            <intent-filter android:priority="999">
+                　
+                <action android:name="com.zhidi.MY_BROADCAST2"></action>
+                　　
+            </intent-filter>
+        </receiver>
+
+        <!-- 3、第三个广播接收者。 -->
+        <receiver
+            android:name=".activity.broadCaset.orderbroadcaset.ThirstReceiver"
+            android:permission="true">
+            　　
+            <intent-filter android:priority="998">
+                　
+                <action android:name="com.zhidi.MY_BROADCAST2"></action>
+                　　
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

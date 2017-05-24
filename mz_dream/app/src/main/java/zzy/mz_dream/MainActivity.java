@@ -8,6 +8,8 @@ import android.view.View;
 
 import zzy.mz_dream.activity.DatabindingActivity;
 import zzy.mz_dream.activity.OkhttpActivity;
+import zzy.mz_dream.activity.broadCaset.SendBroadCast;
+import zzy.mz_dream.activity.broadCaset.orderbroadcaset.SendBroadCast2;
 import zzy.mz_dream.activity.eventbus.EventbusActivity;
 import zzy.mz_dream.activity.fragment.MyFragment;
 import zzy.mz_dream.activity.intent.IntentActivity;
@@ -81,9 +83,18 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
 
                     break;
-                case R.id.btn_Dialog:
+                case R.id.btn_Dialog://提示框
                     intent = new Intent(MainActivity.this, CustomMain.class);
                     startActivity(intent);
+                    break;
+                case R.id.btn_broadcast://广播
+                    intent = new Intent(MainActivity.this, SendBroadCast.class);
+                    startActivity(intent);
+                    break;
+                case R.id.btBroad2://广播
+                    intent = new Intent(MainActivity.this, SendBroadCast2.class);
+                    startActivity(intent);
+                    break;
             }
 
 

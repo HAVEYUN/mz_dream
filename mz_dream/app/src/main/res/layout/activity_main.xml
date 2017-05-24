@@ -84,13 +84,28 @@
             android:text="选择器"/>
 
         <Button
-            android:id="@+id/btn_Dialog"
+        android:id="@+id/btn_Dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:onClick="@{presenter.onClick}"
+        android:text="提示框"/>
+
+        <Button
+            android:id="@+id/btn_broadcast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             android:onClick="@{presenter.onClick}"
-            android:text="提示框"/>
+            android:text="广播"/>
 
+        <Button
+            android:id="@+id/btBroad2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:onClick="@{presenter.onClick}"
+            android:text="发送有序广播"/>
 
     </LinearLayout>
 
